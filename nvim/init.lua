@@ -203,7 +203,7 @@ require("lazy").setup({
 			{ "folke/neodev.nvim", opts = {} },
 		},
 		config = function()
-			vim.api.nvim_create_autocmd({
+			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
 				callback = function(event)
 					-- NOTE: Remember that Lua is a real programming language, and as such it is possible
@@ -291,7 +291,7 @@ require("lazy").setup({
 						end, "[T]oggle Inlay [H]ints")
 					end
 				end,
-			}, "LspAttach")
+			})
 
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
