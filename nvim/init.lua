@@ -68,6 +68,11 @@ vim.opt.rtp:prepend(lazypath)
 
 -- plugins
 require("lazy").setup({
+	{
+		"pmizio/typescript-tools.nvim",
+		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+		opts = {},
+	},
 	-- DB
 	"kristijanhusak/vim-dadbod-completion",
 	{
