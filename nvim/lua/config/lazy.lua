@@ -23,34 +23,31 @@ vim.opt.runtimepath:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.opt.number = true
-vim.opt.mouse = "a"
-vim.opt.showmode = false
-vim.opt.clipboard = "unnamedplus"
-vim.opt.breakindent = true
-vim.opt.undofile = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.signcolumn = "yes"
-vim.opt.updatetime = 250
-vim.opt.timeoutlen = 300
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-vim.opt.list = true
-vim.opt.listchars = { tab = "  ", trail = "·", nbsp = "␣" }
-vim.opt.inccommand = "split"
-vim.opt.cursorline = true
-vim.opt.scrolloff = 10
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.bo.softtabstop = 4
-vim.opt.autoindent = true
-vim.opt.hlsearch = true
+vim.opt.number = true -- show line numbers
+vim.opt.mouse = "a" -- enable mouse support in all modes
+vim.opt.showmode = false -- don't show mode since it's already in statusline
+vim.opt.clipboard = "unnamedplus" -- sync clipboard between OS and Neovim
+vim.opt.breakindent = true -- enable break indent
+vim.opt.undofile = true -- save undo history
+vim.opt.ignorecase = true -- case-insensitive searching UNLESS \C or capital in search
+vim.opt.smartcase = true -- case-sensitive when uppercase letters are used
+vim.opt.signcolumn = "yes" -- keep signcolumn on by default
+vim.opt.updatetime = 250 -- decrease update time
+vim.opt.timeoutlen = 300 -- time to wait for a mapped sequence to complete (in milliseconds)
+vim.opt.splitright = true -- configure how new splits should be opened
+vim.opt.splitbelow = true -- configure how new splits should be opened
+vim.opt.list = true -- sets how neovim will display certain whitespace characters in the editor
+vim.opt.listchars = { tab = "  ", trail = "·", nbsp = "␣" } -- define which whitespace characters to show
+vim.opt.inccommand = "split" -- preview substitutions live, as you type!
+vim.opt.cursorline = true -- show which line your cursor is on
+vim.opt.scrolloff = 10 -- minimal number of screen lines to keep above and below the cursor
+vim.opt.tabstop = 4 -- number of spaces tabs count for
+vim.opt.shiftwidth = 4 -- size of an indent
+vim.opt.expandtab = true -- use spaces instead of tabs
+vim.bo.softtabstop = 4 -- number of spaces that a tab counts for while performing editing operations
+vim.opt.autoindent = true -- copy indent from current line when starting a new line
+vim.opt.hlsearch = true -- highlight search results
 
-vim.opt.shiftwidth = 4
-vim.opt.clipboard = "unnamedplus"
-vim.opt.number = true
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
