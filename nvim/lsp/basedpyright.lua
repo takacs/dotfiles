@@ -1,0 +1,28 @@
+return {
+  cmd = { "basedpyright-langserver", "--stdio" },
+  filetypes = { "python" },
+  root_markers = {
+    "Pipfile",
+    "pyproject.toml",
+    "pyrightconfig.json",
+    "requirements.txt",
+    "setup.cfg",
+    "setup.py",
+    ".git",
+  },
+  settings = {
+    basedpyright = {
+      analysis = {
+        pythonVersion = 3.8,
+        typeCheckingMode = "recommended", -- off, basic, standard, strict, recommended, all
+        diagnosticMode = "workspace",
+        inlayHints = {
+          callArgumentNames = false,
+          functionReturnTypes = false,
+          genericTypes = true,
+          variableTypes = true,
+        },
+      },
+    },
+  },
+}

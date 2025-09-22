@@ -20,23 +20,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.lsp.enable({
   -- lua
   "lua_ls",
-  -- nix
-  --
-  --[[
-  "nil_ls",
-  "nixd",
   -- python
-  "pyright",
-  "ruff",
-  -- markdown
-  "ltex",
-  -- terraform
-  "terraformls",
-  -- yaml
-  "yamlls",
-  -- bash
-  "bashls"
-  ]] --
+  "basedpyright",
+  "ruff"
 })
 
 require("config.lazy")
+require("config.lsp")
